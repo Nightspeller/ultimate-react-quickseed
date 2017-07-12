@@ -1,7 +1,8 @@
-export interface ComponentsListProps {
+export interface IComponentsListProps {
     counter: number;
-    onIncrement?: () => void;
-    onDecrement?: () => void;
-    onIncrementAsync?: () => void;
-    onDecrementAsync?: () => void;
+    asyncInProgress: boolean;
+    onIncrementSync: () => void;
+    onDecrementSync: () => void;
+    onIncrementAsync: (param?: number) => void;
+    onDecrementAsync: (param?: number) => void;
 }

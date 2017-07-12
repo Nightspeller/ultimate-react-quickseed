@@ -6,7 +6,10 @@ import { Action } from 'redux-actions';
 import { withRouter } from 'react-router-dom';
 
 export function mapStateToProps({ counterState }: IStoreState) {
-    return counterState;
+    return {
+        counter: counterState.asyncInProgress,
+        asyncInProgress: counterState.asyncInProgress
+    };
 }
 
 export function mapDispatchToProps(dispatch: Dispatch<Action<number>>) {
@@ -18,4 +21,5 @@ export function mapDispatchToProps(dispatch: Dispatch<Action<number>>) {
     };
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ComponentsList) as any);
+// TODO: whatever - i have no idea what i should do here instead of these <any>
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ComponentsList as any) as any);

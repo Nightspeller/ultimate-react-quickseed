@@ -5,10 +5,9 @@ import './components-list.component.css';
 
 import Component1 from './component-1/component-1.component';
 import Component2 from './component-2/component-2.component';
-// import { ComponentsListProps } from '../../types/components-list.types';
+import { IComponentsListProps } from '../../types/components-list.types';
 
-// TODO: implement ComponentsListProps instead of any
-class ComponentsList extends React.Component<any, {}> {
+class ComponentsList extends React.Component<IComponentsListProps, {}> {
     render() {
         const {
             counter,
@@ -23,9 +22,11 @@ class ComponentsList extends React.Component<any, {}> {
         return (
             <div className="prefix-components-list">
                 <h1>Component List</h1>
+
                 <Route exact={true} path="/" render={() => <div>No components selected</div>}/>
                 <Route path="/component-1" render={() => <Component1 counter={counter}/>}/>
                 <Route path="/component-2" component={Component2}/>
+
                 <button onClick={onIncrementSync}>Increment Sync</button>
                 <button onClick={onDecrementSync}>Decrement Sync</button>
                 <br/>
