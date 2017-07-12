@@ -1,5 +1,5 @@
 import {  } from '../actions/counter.actions';
-import { ICounterStore } from '../types/redux.types';
+import { ICounterState } from '../types/redux.types';
 import {
     DECREMENT_COUNTER_SYNC,
     INCREMENT_COUNTER_ASYNC,
@@ -10,9 +10,9 @@ import { Action } from 'redux-actions';
 
 // TODO: proper init initial state
 export function counterReducer(
-    state: ICounterStore = {counter: 0, asyncInProgress: false},
+    state: ICounterState = {counter: 0, asyncInProgress: false},
     action: Action<number>
-): ICounterStore {
+): ICounterState {
     switch (action.type) {
         case INCREMENT_COUNTER_SYNC:
             return { ...state, counter: state.counter + (action.payload || 1) };

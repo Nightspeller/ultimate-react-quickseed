@@ -1,8 +1,11 @@
+import { RouterState } from 'react-router-redux';
+
 export interface IStoreState {
-    counterStore: ICounterStore;
+    counterState: ICounterState;
+    router: RouterState;
 }
 
-export interface ICounterStore {
+export interface ICounterState {
     counter: number;
     asyncInProgress: boolean;
 }

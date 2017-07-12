@@ -3,9 +3,10 @@ import * as actions from '../actions/counter.actions';
 import { IStoreState } from '../types/redux.types';
 import { connect, Dispatch } from 'react-redux';
 import { Action } from 'redux-actions';
+import { withRouter } from 'react-router-dom';
 
-export function mapStateToProps({ counterStore }: IStoreState) {
-    return counterStore;
+export function mapStateToProps({ counterState }: IStoreState) {
+    return counterState;
 }
 
 export function mapDispatchToProps(dispatch: Dispatch<Action<number>>) {
@@ -17,4 +18,4 @@ export function mapDispatchToProps(dispatch: Dispatch<Action<number>>) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ComponentsList);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ComponentsList) as any);
