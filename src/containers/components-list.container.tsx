@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 
 export function mapStateToProps({ counterState }: IStoreState) {
     return {
-        counter: counterState.asyncInProgress,
+        counter: counterState.counter,
         asyncInProgress: counterState.asyncInProgress
     };
 }
