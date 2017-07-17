@@ -1,3 +1,31 @@
+## From developer
+
+Ultimate React QuickSeed is a project based on Typescript React Started, as described here:
+
+[Typescript React Started](https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter)
+
+In addition following features and dependencies were added, integrated and showcased in example app:
+
+- Recommended project structure (at the end of the day it is my personal preference, but I believe it goes in line with what is ususally used by many developers out there)
+- Redux for React ("react-redux")
+- Redux Actions ("redux-actions")
+- Redux Thunk ("redux-thunk")
+- Redux Thunk Actions ("redux-thunk-actions")
+- React Router ("react-router-dom")
+- Redux Binding for Router ("react-router-redux")
+- Integration with Redux Dev Tools ("redux-devtools-extension")
+- SCSS Integration ("node-sass-chokidar")
+
+In order to make use of SCSS integration "start" and "build" commands were modified to include SCSS compilation.
+
+## How to start
+
+Simply clone the project from GitHub (or download it) and run 'npm install'. When it is done, start developing and run 'npm start' to open an app in the browser.
+
+## "Create React App" Documentation
+
+WARNING, information is not 100% accurate, because describes empty Create React App project, while this project added bunch of elements to be an Ultimate React QuickSeed! (see above)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
